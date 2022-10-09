@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/utilitats.js"></script>
+    <title>Exercici10</title>
+</head>
+<body>
+    <script>
+        document.write("Prova enter : " + esEnter(5) + "<br>");
+        document.write("Prova decimal : " + esDecimal(5.5) + "<br>");
+        document.write("Prova enter : " + esEnter(5.5) + "<br>");
+        document.write("Prova decimal : " + esDecimal(5) + "<br>");
+        document.write("Prova filtre : " + esDecimal("hola") + "<br>");
+
+        document.write("Prova telefono vertader : " + validarTelefon("601319464") + "<br>")
+        document.write("Prova telefono vertader : " + validarTelefon("701 319 464") + "<br>")
+        document.write("Prova telefono fals : " + validarTelefon("60139464") + "<br>")
+        document.write("Prova telefono fals : " + validarTelefon("901394641") + "<br>")
+        document.write("Prova data : " + validarData("28/09/2002") + "<br>")
+    </script>
+</body>
+</html>
