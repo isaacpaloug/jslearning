@@ -1,14 +1,14 @@
 "use strict";
-function sumanumero(a, b) {
+function sumaNumero(a, b) {
   return parseInt(a) + parseInt(b);
 }
-function restanumero(a, b) {
+function restaNumero(a, b) {
   return a - b;
 }
-function multiplicacionumero(a, b) {
+function multiplicacioNumero(a, b) {
   return a * b;
 }
-function divisionumero(a, b) {
+function divisioNumero(a, b) {
   return a / b;
 }
 
@@ -78,11 +78,11 @@ function validarNif(dni) {
   } else {
     return false;
   }
-  function validarObligatori(arg) {
-    if (arg === null || arg === "" || arg.trim() === "") {
-      return false;
-    } else {
-      return true;
-    }
+}
+function validarOligatori(arg) {
+  if (arg === null || arg === "" || arg.trim() === "") {
+    return false;
+  } else {
+    return true;
   }
 }
