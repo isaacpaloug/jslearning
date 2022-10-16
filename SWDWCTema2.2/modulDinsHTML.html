@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercici2</title>
+    <title>modulDinsHtml</title>
 </head>
 <body>
+    <h2>hola</h2>
+    <script type="module">
+        import {validarNif} from './modules/utilitats.js';
+        document.write("Prova Nif : " + validarNif("7821") +  "<br>");
+    </script>
 </body>
 </html>

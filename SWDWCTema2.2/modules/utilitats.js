@@ -1,4 +1,5 @@
 "use strict";
+
 function sumaNumero(a, b) {
   return parseInt(a) + parseInt(b);
 }
@@ -44,7 +45,7 @@ function llegirEnters() {
   } while (num % 1 != 0);
 }
 function validarTelefon(telefon) {
-  tlf = telefon.replace(/\s/g, "").length;
+  var tlf = telefon.replace(/\s/g, "").length;
   if (tlf == 9) {
     if (telefon.charAt(0) == "6" || telefon.charAt(0) == "7") {
       return true;
@@ -64,13 +65,13 @@ function validarData(data) {
   }
 }
 
-function validarNif(dni) {
+export function validarNif(dni) {
   var lletres = "TRWAGMYFPDXBNJZSQVHLCKET";
   if (dni.length == 9) {
-    lletradni = dni[8].toUpperCase();
-    numero = dni.substr(0, dni.length - 1);
+    var lletradni = dni[8].toUpperCase();
+    var numero = dni.substr(0, dni.length - 1);
     if (esEnter(numero)) {
-      posicio = numero % 23;
+      var posicio = numero % 23;
       return lletres[posicio] == lletradni;
     } else {
       return false;
@@ -79,10 +80,11 @@ function validarNif(dni) {
     return false;
   }
 }
+
 function validarOligatori(arg) {
   if (arg === null || arg === "" || arg.trim() === "") {
     return false;
   } else {
     return true;
   }
-}
+};
