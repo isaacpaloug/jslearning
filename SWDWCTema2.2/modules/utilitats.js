@@ -12,8 +12,7 @@ function multiplicacioNumero(a, b) {
 function divisioNumero(a, b) {
   return a / b;
 }
-
-function elevarNumero(base, exponent) {
+export default function elevarNumero(base, exponent) {
   return base ** exponent;
 }
 function esEnter(numero) {
@@ -44,7 +43,7 @@ function llegirEnters() {
     num = prompt("Introdueix un numero enter");
   } while (num % 1 != 0);
 }
-function validarTelefon(telefon) {
+export function validarTelefon(telefon) {
   var tlf = telefon.replace(/\s/g, "").length;
   if (tlf == 9) {
     if (telefon.charAt(0) == "6" || telefon.charAt(0) == "7") {
@@ -56,7 +55,7 @@ function validarTelefon(telefon) {
     return false;
   }
 }
-function validarData(data) {
+export function validarData(data) {
   var reg = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
   if (data.match(reg)) {
     return true;
@@ -81,7 +80,7 @@ export function validarNif(dni) {
   }
 }
 
-function validarOligatori(arg) {
+export function validarOligatori(arg) {
   if (arg === null || arg === "" || arg.trim() === "") {
     return false;
   } else {

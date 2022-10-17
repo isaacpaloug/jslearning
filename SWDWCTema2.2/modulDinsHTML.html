@@ -7,10 +7,17 @@
     <title>modulDinsHtml</title>
 </head>
 <body>
-    <h2>hola</h2>
+    <h2>Exercici 2</h2>
     <script type="module">
-        import {validarNif} from './modules/utilitats.js';
-        document.write("Prova Nif : " + validarNif("7821") +  "<br>");
+        import {validarNif,validarData} from "./modules/utilitats.js";
+        console.log("Prova Nif : " + validarNif("7821"));
+        console.log("Prova Nif : " + validarNif("78219594K"));
+        console.log("Prova Data : " + validarData("7821"));
+        console.log("Prova Data : " + validarData("28/02/2002"));
+        // Ara provam a cridar una funcio no importada
+        console.log("Prova cridar funcio no importada : " + esEnter
+        (78));
+        
     </script>
 </body>
 </html>
