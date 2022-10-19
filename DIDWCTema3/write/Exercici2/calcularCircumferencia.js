@@ -7,6 +7,5 @@ function calcular1() {
 function calcular2() {
     let radi = document.getElementById("radi").value;
     let longitud = 2 * Math.PI * radi;
-    var paragraf = document.getElementById("longitud");
-    paragraf.innerHTML = longitud;
+    document.getElementById('longitud').innerHTML=longitud;
 }
