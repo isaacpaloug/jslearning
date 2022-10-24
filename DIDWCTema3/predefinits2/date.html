@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imatges/favicon.ico">
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+
+    <script src="dates.js"></script>
+    <title>Dates</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            //  EXERCICI 1
+            const cadenaData = "2002-09-28";
+            let dataCadena = new Date(cadenaData);
+            console.log(dataCadena);
+            // EXERCICI 2
+            const dataValors = new Date(2018, 11, 23, 10, 33, 30);
+            console.log(dataValors);
+            // EXERCICI 3
+            console.log("");
+            console.log("Torna milisegons");
+            console.log(dataValors.getTime());
+            console.log("Torna el més de la data");
+            console.log(dataValors.getMonth());
+            console.log("Torna l'any");
+            console.log(dataValors.getFullYear());
+            console.log("Torna el dia del mes");
+            console.log(dataValors.getDate());
+            console.log("Torna el dia de la setmana");
+            console.log(dataValors.getDay());
+            console.log("Torna ses hors");
+            console.log(dataValors.getHours());
+            console.log("Torna els minuts");
+            console.log(dataValors.getMinutes());
+            console.log("Torna els segons");
+            console.log(dataValors.getSeconds());
+            // EXERCICI 4
+            console.log(esFinde(dataValors));
+        }
+    </script>
+</body>
+
+</html>
