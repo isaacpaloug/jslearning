@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imatges/favicon.ico">
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+
+
+    <title>Pila</title>
+    <script src="arrays.js"></script>
+</head>
+
+<body>
+
+    <h2>Exercici [10-13]</h2>
+    <p style="color:red ;"> Es visualitza a la consola de desenvolupador</p>
+    <script type="text/javascript">
+        'use strict';
+        window.onload = function () {
+            let vector = []
+            console.log("EXERCICI 10");
+            console.log("");
+            console.log("FEIM UN PUSH DE 'hola', 'adeu', 1");
+            vector.push("hola");
+            vector.push("adeu");
+            vector.push(1);
+            console.log(vector);
+            console.log("feim un pop()");
+            console.log(vector.pop());
+            console.log(vector);
+            console.log("");
+            console.log("EXERCICI 11");
+            console.log("");
+            let cadenaNums = [23, 100, 21, 1, 33, 75, 89, 2, 12, 63, 43, 9, 91, 32, 34, 17, 53, 30, 27, 20];
+            console.log("Desordenada: " + cadenaNums);
+            cadenaNums.sort(function (a, b) { return a - b });
+            console.log("Ordenada: " + cadenaNums);
+            console.log("");
+            console.log("EXERCICI 12");
+            console.log("");
+            let cadenaNormals = ["hola", "com", "va", "aixo"];
+            let cadenaInvertits = cadenaNormals.map(actual => {
+                let nova = "";
+                for(let j = actual.length -1; j >= 0; j--){
+                    nova += actual.charAt(j);
+                }
+                console.log(nova);
+            })
+            
+        }
+    </script>
+</body>
+
+</html>

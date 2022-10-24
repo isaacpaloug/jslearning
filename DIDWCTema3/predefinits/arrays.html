@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imatges/favicon.ico">
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+
+
+    <title>Arrays</title>
+    <script src="arrays.js"></script>
+</head>
+
+<body>
+
+    <h2>Exercicis [1 - 9]</h2>
+    <p style="color:red ;"> Es visualitza a la consola de desenvolupador</p>
+    <script type="text/javascript">
+        'use strict';
+        window.onload = function () {
+            let vector = [1, 2, 3, true, false, "hola", "adeu", "element8", 9, 10];
+            vector[15] = "exercici2";
+            recorrerPerIndex(vector);
+            console.log("");
+            recorrerPerValors(vector);
+            console.log("");
+            recorrerPerValors2(vector);
+            console.log("");
+            recorrerPerValors3(vector);
+            console.log("");
+            let cadena1 = ["Hola", "com", "estas"];
+            let cadena2 = ["soc", "n'Isaac"];
+            let cadenaJunta = concatenaArrays(cadena1, cadena2);
+            console.log(cadenaJunta);
+            console.log("");
+            fraseArray(cadenaJunta);
+            console.log("");
+            arrayInvertit(cadenaJunta);
+        }
+    </script>
+</body>
+
+</html>
