@@ -41,3 +41,7 @@ function arrayInvertit(cadena) {
   let frase = cadena.reverse().join(" ");
   console.log(frase);
 }
+function sumarValorsArray(cadena) {
+  let total = cadena.reduce((anterior, actual) => anterior + actual);
+  return total;
+}
