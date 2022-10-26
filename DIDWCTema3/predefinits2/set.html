@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imatges/favicon.ico">
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+
+    <script src="dates.js"></script>
+    <title>Set</title>
+</head>
+
+<body>
+    <h2>Exercici 8</h2>
+    <p id="demo"></p>
+    <h2>Exercici 9</h2>
+    <div id="3"></div>
+    <div id="4"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+            let conjunt = new Set();
+            conjunt.add(1);
+            conjunt.add(1);
+            conjunt.add("hola");
+            conjunt.add("adeu");
+            conjunt.add("adeu");
+            var val = '';
+            for (item of conjunt.values())
+                val += item + ',';
+            document.getElementById('demo').textContent = "The set values are: " + val;
+            // EXERCICI 9
+            exercici9 = [1, 2, 1, "hola", "adeu", 3, 2];
+            let missatge = '[ ';
+            for (const iterator of exercici9) {
+                missatge += iterator + " "
+            }
+            missatge += "]"
+            document.getElementById("3").innerHTML = "Array amb duplicats: " + missatge;
+
+            cadenaForaDuplicats = eliminaDuplicats(exercici9);
+            let missatge2 = '[ ';
+            for (const iterator2 of cadenaForaDuplicats) {
+                missatge2 += iterator2 + " "
+            }
+            missatge2 += "]"
+            document.getElementById("4").innerHTML = "Array fora duplicats: " + missatge2;
+        }
+
+    </script>
+</body>
+
+</html>

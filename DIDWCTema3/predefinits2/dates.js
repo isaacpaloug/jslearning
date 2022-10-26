@@ -5,3 +5,15 @@ function esFinde(data) {
     }
     return("No és cap de setmana");
 }
+
+function eliminaDuplicats(cadena){
+    let conjunt = new Set();
+    let cadenaForaDuplicats = new Array();
+    for (const value of cadena) {
+        conjunt.add(value);
+    }
+    for (const iterator of conjunt) {
+        cadenaForaDuplicats.push(iterator)
+    }
+    return cadenaForaDuplicats;
+}
