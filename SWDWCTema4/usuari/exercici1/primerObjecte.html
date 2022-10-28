@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercci1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function(){
+            let alumne1 = {
+                nom: "Isaac",
+                llinatge: "Palou",
+                edat: 20,
+                curs: "2SW"
+            }
+            let missatge1 = 'Dades de l\'alumne 1: ';
+            for (const key in alumne1) {
+                if (alumne1.hasOwnProperty.call(alumne1, key)) {
+                    missatge1 += alumne1[key] + " ";
+                }
+                
+            }
+            let missatge2 = 'Dades de l\'alumne 2: ';
+            let alumne2 = {};
+            alumne2.nom = "Albert";
+            alumne2.llinatges = "Crespi";
+            alumne2.edat = 19;
+            alumne2.curs = "2SM";
+
+            Object.values(alumne2).forEach(element => {
+                missatge2 += element + " ";
+            });
+
+            document.getElementById("alumne1").innerHTML = missatge1;
+            document.getElementById("alumne2").innerHTML = missatge2;
+        }
+    </script>
+    <p id="alumne1"></p>
+    <p id="alumne2"></p>
+</body>
+</html>
