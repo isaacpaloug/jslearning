@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacio</title>
+    <script src="js/aplicacio.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            aplicacio1 = new aplicacio("pou", "joc", "joc d'alimentar mascota", 0);
+            aplicacio2 = new aplicacio("lol", "joc", "descripcio doi", 0);
+            document.getElementById("exercici3.1").innerHTML = aplicacio1.toString();
+            document.getElementById("exercici3.2").innerHTML = aplicacio2.toString();
+            aplicacio1.nom = "Modificat";
+            document.getElementById("exercici3.3").innerHTML = aplicacio1.toString();
+            document.getElementById("exercici3.4").innerHTML = aplicacio2.getAplicacioCompleta();
+
+
+        }
+    </script>
+    <h3>2 OBJECTES</h3>
+    <p id="exercici3.1"></p>
+    <p id="exercici3.2"></p>
+    <h3>OBJECTE AMB ATRIBUT MODIFICAT</h3>
+    <p id="exercici3.3"></p>
+    <h3>PROTOTIPUS</h3>
+    <p id="exercici3.4"></p>
+</body>
+
+</html>
