@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/alumnes.js"></script>
+    <script src="js/moduls.js"></script>
+    <title>Exercici4</title>
+</head>
+
+<body>
+    <script type="module">
+        window.onload = function () {
+            // CREAM ELS MODULS :
+            let modul1 = new Modul("Programacio", "SWPro", "1r");
+            let modul2 = new Modul("BaseDeDades", "SWBBDD", "1r");
+            let modul3 = new Modul("Entorn de desenvolupament", "ED", "1r");
+            // ELS A FICAM A UNA LLISTA
+            let llistaModuls = [modul1, modul2, modul3];
+            // CREAM UN ALUMNE MATRICULAT A TOTS ELS MODULS
+            let alumne1 = new Alumne("Isaac", "Palou Gijon", "2DAW", llistaModuls);
+            let missatge = '';
+
+            llistaModuls.forEach(element => {
+                missatge += element.toString() + " | ";
+
+            });
+            document.getElementById("prova1").innerHTML = "Moduls = " + missatge;
+
+            // BORRAM UN MODUL
+            alumne1.borrarModul(modul1);
+            for (const key in alumne1) {
+                if (alumne1.hasOwnProperty.call(alumne1, key)) {
+                    console.log(alumne1[key]);
+
+                }
+            }
+            // AFEGIM UN MODUL
+            alumne1.afegirModul(modul1);
+            for (const key in alumne1) {
+                if (alumne1.hasOwnProperty.call(alumne1, key)) {
+                    console.log(alumne1[key]);
+
+                }
+            }
+
+            // AFEGIM UN MODUL REPETIT
+
+            alumne1.afegirModul(modul1);
+            for (const key in alumne1) {
+                if (alumne1.hasOwnProperty.call(alumne1, key)) {
+                    console.log(alumne1[key]);
+
+                }
+            }
+        }
+    </script>
+    <p id="prova1"></p>
+</body>
+
+</html>
