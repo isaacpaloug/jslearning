@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+    <script src="../js/formularis.js"></script>
+    <title>modificaForm</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <label for="Nom">Nom:</label>
+        <input type="text" name="NAME" placeholder="Isaac" id="nom">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="PASSWORD" id="password">
+        <br>
+        <p>Please select your favorite Web language:</p>
+        <input type="radio" id="java" name="fav_language" value="java">
+        <label for="java">Java</label><br>
+        <input type="radio" id="php" name="fav_language" value="PHP">
+        <label for="php">PHP</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <br>
+        <p>Quin vehicle tens:</p>
+        <input type="checkbox" class="miCheckbox" name="COTXO">
+        <label for="cotxo">Cotxo</label><br>
+        <input type="checkbox" class="miCheckbox" name="MOTO">
+        <label for="moto">Moto</label><br>
+        <input type="checkbox" class="miCheckbox" name="BICI">
+        <label for="bici">Bici</label>
+        <br>
+        <br>
+
+        <label id="cotxos" for="cars">Choose a car:</label>
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+
+        <label for="cars">Choose a car:</label>
+        <select name="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+        <br>
+        <p>COMENTARIS:</p>
+        <textarea name="TEXTAREA" id="" cols="10" rows="1" placeholder="molt be"></textarea>
+        <br>
+        <button type="reset">RESET</button>
+        <button type="submit">SUBMIT</button>
+        <br>
+        <hr>
+        <h2>EXERCICI 3</h2>
+        <input type="button" value="ASIGNAR" onclick="asignar()">
+        <input type="button" value="MARCAR/DESMARCAR" onclick="marcar()">
+        <input type="button" value="DESHABILITAR/HABILITAR" onclick="deshabilitar()">
+        <input type="button" value="LECTURA/NOLECTURA" onclick="convertLectura()">
+    </form>
+
+    <hr>
+    <h3>DIFERENCIES ENTRE DESHABILIATAR I LECTURA</h3>
+    <p>Si un element esta deshabilitat (.disabled) només es podrà llegir i ames no s'enviarà al servidor, en canvi amb el .readOnly es pot llegir i ames s'envia al servidor</p>
+</body>
+
+</html>
