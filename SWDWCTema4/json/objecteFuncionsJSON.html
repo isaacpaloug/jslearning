@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici5</title>
+    <script src="js/json.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function(){
+            const cotxo1 = `{"marca":"seat","model":"ibiza","matricula":"3141CLN"}`;
+            const ibiza = JSON.parse(cotxo1);
+            document.getElementById("ex5").innerHTML = mostraAtributs(ibiza);
+            function mostraAtributs(cotxo) {
+                return cotxo.marca + " " + cotxo.model + " " + cotxo.matricula;
+            }
+        }
+    </script>
+    <h2>EXERCICI 5</h2>
+    <p id="ex5"></p>
+</body>
+</html>
