@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../imatges/favicon.ico">
+    <title>Window</title>
+    <link href="../css/practica.css" rel="stylesheet">
+    <link href="../imatges/logo-cifp.ico" rel="icon" type="image/x-icon">
+    <script type="text/javascript">
+        'use strict';
+
+        window.onload = function () {
+            let finestra;
+
+            document.getElementById("obrir").onclick = function () {
+                if (finestra === undefined || finestra.closed)
+                    finestra = window.open('tanca.html', 'Tanca', 'width=100, height=100');
+            };
+
+            document.getElementById("modificar").onclick = function () {
+                if (finestra !== undefined && !finestra.closed)
+                    finestra.resizeTo(700, 600);
+            };
+
+            document.getElementById("moure").onclick = function () {
+                if (finestra !== undefined && !finestra.closed)
+                    finestra.moveTo(500, 400);
+            };
+
+            document.getElementById("canviar").onclick = function () {
+                if (finestra !== undefined && !finestra.closed)
+                    finestra.document.getElementById('paragraf').innerHTML = 'Canviat per n\'Isaac';
+            };
+
+            document.getElementById("tancar").onclick = function () {
+                if (finestra !== undefined && !finestra.closed)
+                    finestra.close();
+            };
+        };
+    </script>
+
+</head>
+<body>
+        <h1>Window</h1>
+        <div>
+            <button id="obrir" onclick>Obre</button>
+            <button id="modificar">Modifica</button>
+            <button id="moure">Mou</button>
+            <button id="canviar">Canvia</button>
+            <button id="tancar">Tanca</button>
+        </div>
+        <p><a href="index.html">Tornar a l'index</a>.</p>
+    </div>
+</div>
+</body>
+</html>
