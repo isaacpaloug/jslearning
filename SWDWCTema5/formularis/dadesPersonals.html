@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../imatges/logo-cifp.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../js/validarFormulari.js"></script> -->
     <title>Dades personals</title>
 </head>
 
@@ -14,16 +15,19 @@
     <form action="dadesPersonals.html" method="post" class="form-register">
         <h4>EXERCICI 4</h4>
         <fieldset class="field">
+            <!-- ? DADES BASIQUES -->
             <legend>Dades bàsiques</legend>
             <label for="nom">Nom</label>
-            <input type="text" class="controls" placeholder="Isaac" id="nom">
+            <input type="text" class="controls" placeholder="Isaac" id="nom" required>
+            <small></small>
             <label for="llinatges">Llinatges</label>
-            <input type="text" class="controls" placeholder="Palou Gijon" id="llinatges">
+            <input type="text" class="controls" placeholder="Palou Gijon" id="llinatges" required>
             <label for="telf1">Telefon1</label>
-            <input type="tel" name="" class="controls" id="tlf1">
+            <input type="tel" name="" class="controls" id="tlf1" required>
         </fieldset>
 
         <fieldset class="field">
+            <!-- ? ALTRES DADES -->
             <legend>Altres dades</legend>
             <label for="telf1">Telefon2</label>
             <input type="tel" name="" class="controls" id="tlf2">
@@ -41,9 +45,9 @@
 
             </p>
             <label for="illa">Illa</label>
-            <input type="text" id="illa" class="controls" placeholder="Mallorca" required>
+            <input type="text" id="illa" class="controls" placeholder="Mallorca">
             <label for="poblacio">Poblacio</label>
-            <input type="text" id="poblacio" class="controls" placeholder="Sa Pobla" required>
+            <input type="text" id="poblacio" class="controls" placeholder="Sa Pobla">
             <label for="carrer">Carrer</label>
             <input type="text" id="carrer" class="controls">
             <label for="cp">Codi Postal</label>
@@ -53,9 +57,8 @@
         </fieldset>
 
         <input type="submit" value="Validar" class="botons">
-
-
     </form>
+    </script>
 </body>
 
 </html>
