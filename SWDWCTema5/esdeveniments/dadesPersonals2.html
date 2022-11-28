@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../imatges/logo-cifp.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dades personals</title>
+    <script type="text/javascript" src="../js/esdeveniments2.js"></script>
+</head>
+
+<body>
+    <form id="formulari" action="dadesPersonals.html" method="post" class="form-register">
+        <h4>EXERCICI 4</h4>
+        <fieldset class="field">
+            <!-- ? DADES BASIQUES -->
+            <legend>Dades bàsiques</legend>
+            <label for="nom">Nom</label>
+            <input type="text" class="controls" placeholder="Isaac" id="nom" required>
+            <small></small>
+            <label for="llinatges">Llinatges</label>
+            <input type="text" class="controls" placeholder="Palou Gijon" id="llinatges" required>
+            <label for="telf1">Telefon1</label>
+            <input type="tel" name="" class="controls" id="tlf1" required>
+        </fieldset>
+
+        <fieldset class="field">
+            <!-- ? ALTRES DADES -->
+            <legend>Altres dades</legend>
+            <label for="telf1">Telefon2</label>
+            <input type="tel" name="" class="controls" id="tlf2">
+            <label for="mail">Email</label>
+            <input type="email" class="controls" placeholder="isaac@email.com" id="correu">
+            <label for="date">Data de naixament</label>
+            <input type="date" name="" id="dataNaixament" class="controls">
+            <p>Sexe:
+                <br>
+            <div class="controls">
+                <input type="radio" name="hm" value="h"> Home
+                <input type="radio" name="hm" value="m"> Dona
+                <input type="radio" name="hm" value="al"> Altre
+            </div>
+
+            </p>
+            <label for="illa">Illa</label>
+            <input type="text" id="illa" class="controls" placeholder="Mallorca">
+            <label for="poblacio">Poblacio</label>
+            <input type="text" id="poblacio" class="controls" placeholder="Sa Pobla">
+            <label for="carrer">Carrer</label>
+            <input type="text" id="carrer" class="controls">
+            <label for="cp">Codi Postal</label>
+            <input type="text" class="controls" id="cp">
+            <label for="descripcio">Descripcio</label>
+            <textarea name="descripcio" class="controls" id="descripcio" cols="10" rows="5" id="descripcio"></textarea>
+        </fieldset>
+
+        <input id="enviar" type="submit" value="Enviar" class="botons">
+        <input id="reset" type="reset" value="Reset" class="botons">
+    </form>
+</body>
+
+</html>
