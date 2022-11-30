@@ -62,5 +62,41 @@ window.onload = function () {
             esdeveniment.preventDefault();
         }
     });
+
+    let pobMallorca = ["Sa Pobla", "Alcudia", "Pollença", "Inca"];
+    let pobMenorca = ["Mercadal", "Alaior", "Maó", "Ciutadella"];
+    let pobEivissa = ["Sant Antoni", "Sant Josep", "Santa Eulàlia"];
+    let pobFormentera = ["Es Caló", "Es Pujols", "La Sabina"];
+
+
+    // TODO 5. Programau el necessari per aconseguir que en canviar la illa i anar a un altre control,
+    // TODO la llista de poblacions es carregui amb poblacions d'aquesta illa en concret. Per exemple,
+    // TODO podeu guardar les poblacions de cada illa dins d'un array.
+
+    document.getElementById("illa").onchange = function (esdeveniment) {
+        let valorIlla = document.getElementById("illa").value;
+        let illa;
+        //SELECCIONAM L'ARRAY SEGONS VALOR DEL SELECT ILLA
+        switch (valorIlla) {
+            case "mallorca":
+                illa = pobMallorca;
+                break;
+            case "menorca":
+                illa = pobMenorca;
+                break;
+            case "eivissa":
+                illa = pobEivissa;
+                break;
+            case "formentera":
+                illa = pobFormentera;
+                break;
+        }
+        //VERSIO INNER HTML
+        let poblacio = document.getElementById("poblacio");
+        poblacio.innerHTML = "";
+        for (let p of illa) {
+            poblacio.innerHTML += "<option value='" + p + "'>" + p + "</option>";
+        }
+    }
 };
 

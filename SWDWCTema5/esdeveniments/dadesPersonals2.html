@@ -44,16 +44,26 @@
             </div>
 
             </p>
-            <label for="illa">Illa</label>
-            <input type="text" id="illa" class="controls" placeholder="Mallorca">
-            <label for="poblacio">Poblacio</label>
-            <input type="text" id="poblacio" class="controls" placeholder="Sa Pobla">
-            <label for="carrer">Carrer</label>
-            <input type="text" id="carrer" class="controls">
-            <label for="cp">Codi Postal</label>
-            <input type="text" class="controls" id="cp">
-            <label for="descripcio">Descripcio</label>
-            <textarea name="descripcio" class="controls" id="descripcio" cols="10" rows="5" id="descripcio"></textarea>
+            <!--    ILLA-->
+            <label for="illa">Illa:</label>
+            <select name="illa" id="illa">
+                <option value="" selected="selected" disabled></option>
+                <option value="mallorca">Mallorca</option>
+                <option value="menorca">Menorca</option>
+                <option value="eivissa">Eivissa</option>
+                <option value="formentera">Formentera</option>
+            </select><br><br>
+            <!--    POBLACIÓ-->
+            <label for="poblacio">Població: </label>
+            <select name="poblacio" id="poblacio">
+                <option value="" selected="selected" disabled></option>
+                </select><br><br>
+                    <label for="carrer">Carrer</label>
+                    <input type="text" id="carrer" class="controls">
+                    <label for="cp">Codi Postal</label>
+                    <input type="text" class="controls" id="cp">
+                    <label for="descripcio">Descripcio</label>
+                    <textarea name="descripcio" class="controls" id="descripcio" cols="10" rows="5"id="descripcio"></textarea>
         </fieldset>
 
         <input id="enviar" type="submit" value="Enviar" class="botons">
