@@ -135,7 +135,7 @@ function validarData(data) {
     if (!validarObligatori(data)) {
         return false;
     }
-    let [dia, mes, any] = data.split("/");
+    let [dia, mes, any] = data.split("-");
     // Totes han de ser sencers
     if (!validarSencer(dia) || !validarSencer(mes) || !validarSencer(any)) {
         return false;

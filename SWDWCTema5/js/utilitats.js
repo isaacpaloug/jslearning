@@ -1,3 +1,4 @@
+"use strict"
 function suma(a, b) {
 	return a + b;
 }
@@ -127,7 +128,7 @@ function validarData(data) {
 	return true;
 }
 
-function validarNIF(nif) {
+export function validarNIF(nif) {
 	var cadena = 'TRWAGMYFPDXBNJZSQVHLCKET';
 	if (!validarObligatori(nif) || nif.length != 9) {
 		return false;
